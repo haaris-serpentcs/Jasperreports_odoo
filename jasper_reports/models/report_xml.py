@@ -262,7 +262,7 @@ class ReportXml(models.Model):
         path += '/../custom_reports/%s' % name
         
         if os.path.isfile(path): # check contents to be sure if need to be overwriten
-            hash_of_value = hashlib.sha256(base64.decodestring(value)).hexdigest()
+            hash_of_value = hashlib.sha256(base64.decodebytes(value)).hexdigest()
             with open(path, 'rb') as f:
                 text = f.read()
             hash_of_file = hashlib.sha256(text).hexdigest()
