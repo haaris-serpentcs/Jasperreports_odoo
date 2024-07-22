@@ -29,7 +29,7 @@
 
 import json
 
-from odoo.addons.web.controllers import main as report
+from odoo.addons.web.controllers import report
 from odoo.http import content_disposition, route, request, serialize_exception as _serialize_exception
 from werkzeug.urls import url_decode
 from odoo.tools import html_escape
